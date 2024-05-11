@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["Unix", "Dday", "D-Day", "한국어", "Korean", "English"],
+  "author": "leehyowon14",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
