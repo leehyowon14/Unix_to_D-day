@@ -1,0 +1,15 @@
+{
+  "name": "unix_to_d-day",
+  "version": "1.0.0",
+  "description": "Unix를 입력하면 원하는 단위의 D-Day카운터로 변환해주는 라이브라리 (KOR/ENG)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
