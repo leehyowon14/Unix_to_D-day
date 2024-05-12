@@ -29,7 +29,7 @@ npm i unix_to_d-day
 
 ## 예제
 ```javascript
-const { UnixToDday } = require('./index');
+const { UnixToDday } = require('unix_to_d-day');
 
 // 현재 시간보다 3일 후의 Unix 시간
 const futureUnixTime = new Date().getTime() + (3 * 86400000); // 3 days in milliseconds
