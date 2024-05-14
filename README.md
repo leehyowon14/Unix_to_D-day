@@ -42,3 +42,7 @@ const pastDday = UnixToDday(pastUnixTime, 'day', 'Korean');
 console.log(futureDday); // 출력 예: "3일 남음."
 console.log(pastDday); // 출력 예: "3일 지남."
 ```
+
+## To-do
+-[ ] TypeScript화 하기
+-[ ] JSDoc 달기
