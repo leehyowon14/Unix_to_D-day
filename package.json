@@ -1,15 +1,23 @@
 {
   "name": "unix_to_d-day",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Unix를 입력하면 원하는 단위의 D-Day카운터로 변환해주는 라이브라리 (KOR/ENG)",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["Unix", "Dday", "D-Day", "한국어", "Korean", "English"],
+  "keywords": [
+    "Unix",
+    "Dday",
+    "D-Day",
+    "한국어",
+    "Korean",
+    "English"
+  ],
   "author": "leehyowon14",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
   }
 }

@@ -1,5 +1,5 @@
 const supportedPrefix = ['day', 'hour', 'minute', 'second']
-const timeUnitsInMilliseconds = {
+const timeUnitsInMilliseconds: { [unit: string]: number } = {
     'day': 86400000, // 24*60*60*1000
     'hour': 3600000,  // 60*60*1000
     'minute': 60000,    // 60*1000
@@ -7,7 +7,7 @@ const timeUnitsInMilliseconds = {
 };
 
 const supportedLanguage = ['Korean', 'English']
-const languageStrings = {
+const languageStrings: { [language: string]: { [type: string]: { [unit: string]: string } } } = {
     'Korean': {
         "over": {
             "day": "(TIME)일 지남.",
@@ -38,7 +38,7 @@ const languageStrings = {
     }
 }
 
-function determinePrefix(gapBetweenDate) {
+function determinePrefix(gapBetweenDate: number): string {
     if (gapBetweenDate >= 86400000) { // 24*60*60*1000(24시간, 하루)
         return 'day'
     } else if (gapBetweenDate >= 3600000) { // 60*60*1000(1시간)
@@ -49,8 +49,14 @@ function determinePrefix(gapBetweenDate) {
         return 'second'
     }
 }
-
-function UnixToDday(unixTime, prefix, language) {
+/**
+ * Converts a Unix timestamp to a human-readable time gap in the specified language and with the given prefix. like 'D-3'
+ * @param {number} unixTime - The Unix timestamp to convert.
+ * @param {string} prefix - The prefix to use for the time gap.(day, hour, minute, second)
+ * @param {string} language - The language to use for the time gap string.(Korean, English)
+ * @returns {string} The formatted time gap string.
+ */
+function UnixToDday(unixTime: number, prefix: string, language: string): string {
     if (!supportedLanguage.includes(language)) language = 'English'
     const currentDateUnix = new Date().getTime()
     const gapBetweenDate = unixTime - currentDateUnix

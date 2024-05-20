@@ -1,4 +1,4 @@
-const { UnixToDday } = require('./index');
+const { UnixToDday } = require('./src/index');
 
 describe('UnixToDday function', () => {
     test('지원하지 않는 언어 주어질 시, 자동으로 영어로 변경', () => {
