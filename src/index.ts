@@ -65,4 +65,4 @@ function UnixToDday(unixTime: number, prefix: string, language: string): string 
     return timeString[prefix].replace('(TIME)', `${Math.abs(Math.trunc(gapBetweenDate / timeUnitsInMilliseconds[prefix]))}`)
 }
 
-module.exports = { UnixToDday };
+export { UnixToDday };

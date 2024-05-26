@@ -1,6 +1,6 @@
 {
   "name": "unix_to_d-day",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Unix를 입력하면 원하는 단위의 D-Day카운터로 변환해주는 라이브라리 (KOR/ENG)",
   "main": "src/index.ts",
   "scripts": {
