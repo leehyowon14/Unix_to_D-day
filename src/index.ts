@@ -59,7 +59,7 @@ function determinePrefix(gapBetweenDate: number): string {
 function UnixToDday(unixTime: number, prefix: string, language: string): string {
     if (!supportedLanguage.includes(language)) language = 'English'
     const currentDateUnix = new Date().getTime()
-    const gapBetweenDate = unixTime - currentDateUnix
+    const gapBetweenDate = currentDateUnix - unixTime
     const timeString = languageStrings[language][(gapBetweenDate < 0 ? 'under' : 'over')]
     if (!supportedPrefix.includes(prefix)) prefix = determinePrefix(Math.abs(gapBetweenDate))
     return timeString[prefix].replace('(TIME)', `${Math.abs(Math.trunc(gapBetweenDate / timeUnitsInMilliseconds[prefix]))}`)
